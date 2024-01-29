@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #45badd;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.robot {
+	position: relative;
+	width: 100%;
+	max-width: 50rem;
+	text-align: center;
+	overflow: hidden;
+}
+
+.robot img {
+	width: 120%;
+	object-fit: contain;
+	object-position: -8rem center;
+}
+
+button {
+	position: absolute;
+	top: 6rem;
+	right: 6rem;
+	width: auto;
+	padding: 1rem 1.5rem;
+	color: white;
+	background-color: #ff3482;
+	border-radius: 5px;
+	box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.1);
+	font-family: 'Courier Prime', monospace;
+	font-size: 1.25rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+button:hover {
+	filter: brightness(95%);
+}
+
+button:not(:disabled):active {
+	transform: scale(0.98);
+}
+
+button:disabled {
+	font-style: italic;
+	cursor: progress;
+}
+
+@media screen and (max-width: 1000px) {
+	.container {
+		background-size: cover;
+		background-position: center center;
+	}
+
+	button {
+		top: 5rem;
+		right: 4rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.robot img {
+		width: 130%;
+		object-position: -3.5rem center;
+	}
+	button {
+		position: relative;
+		top: -3rem;
+		right: unset;
+		padding: 1rem;
+		font-size: 1rem;
+	}
+}
