@@ -33,9 +33,24 @@ body {
 	width: 120%;
 	object-fit: contain;
 	object-position: -8rem center;
+	pointer-events: none;
 }
 
 button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#mute {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	background-color: #45badd;
+}
+
+#button {
 	position: absolute;
 	top: 6rem;
 	right: 6rem;
@@ -47,21 +62,19 @@ button {
 	box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.1);
 	font-family: 'Courier Prime', monospace;
 	font-size: 1.25rem;
-	border: none;
-	outline: none;
-	cursor: pointer;
+
 	transition: all 0.2s;
 }
 
-button:hover {
+#button:hover {
 	filter: brightness(95%);
 }
 
-button:not(:disabled):active {
+#button:not(:disabled):active {
 	transform: scale(0.98);
 }
 
-button:disabled {
+#button:disabled {
 	font-style: italic;
 	cursor: progress;
 }
@@ -72,7 +85,7 @@ button:disabled {
 		background-position: center center;
 	}
 
-	button {
+	#button {
 		top: 5rem;
 		right: 4rem;
 	}
@@ -83,7 +96,7 @@ button:disabled {
 		width: 130%;
 		object-position: -3.5rem center;
 	}
-	button {
+	#button {
 		position: relative;
 		top: -3rem;
 		right: unset;
